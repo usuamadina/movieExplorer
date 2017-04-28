@@ -1,0 +1,21 @@
+<ion-view view-title="Films details" id="film-details">
+    <ion-content>
+        <div class="card">
+            <ion-item>
+                <div class="infoLeft">
+                    <h2>{{vm.film.title}}</h2>
+                    <p>{{vm.film.director}}</p>
+                </div>
+                <div class="infoRight">
+                    <p>{{vm.film.year}}</p>
+                    <p>{{vm.film.runtime}}</p>                
+                </div>
+            </ion-item>
+            <ion-item>
+                <div class="item item-image">
+                    <img src="{{vm.film.poster}}">
+                </div>
+            </ion-item>
+        </div>
+    </ion-content>
+</ion-view>

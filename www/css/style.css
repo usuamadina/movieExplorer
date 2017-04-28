@@ -1,0 +1,25 @@
+/* Empty. Add your own CSS if you like */
+
+#films.rating{
+	position: absolute;
+    bottom: 4px;	
+}
+
+.info{
+	height:65px;
+	overflow: hidden;
+
+}
+
+#films h2 {
+	white-space: normal;
+}
+
+#films p{
+	white-space: normal
+}
+
+#films img{
+	background-size: cover;
+    background-position: center;
+}
