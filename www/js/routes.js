@@ -30,8 +30,8 @@
                     controller: 'FilmsController',
                     controllerAs: 'vm',
                     resolve: {
-                        films: function(FilmsFactory) {
-                            return FilmsFactory.getFilms();
+                        films: function(FilmsService) {
+                            return FilmsService.getFilms();
                         }
                     }
 
@@ -48,9 +48,9 @@
                     controller: 'FilmsDetailsController',
                     controllerAs: 'vm',
                     resolve: {
-                        film: function(FilmsFactory, $stateParams) {
+                        film: function(FilmsService, $stateParams) {
                         	console.log("getFilm desde routes");
-                            return FilmsFactory.getFilm($stateParams.filmTitle);
+                            return FilmsService.getFilm($stateParams.filmTitle);
                         }
                     }
                 }

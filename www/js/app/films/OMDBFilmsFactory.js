@@ -4,11 +4,11 @@
 
         .module('OMDBFilmsFactory', ['FilmModel', 'Constants'])
 
-    .factory('FilmsFactory', FilmsFactory);
+    .factory('FilmsService', FilmsService);
 
-    FilmsFactory.$inject = ['$http', '$q', 'filmNames', 'omdbApi', 'Film'];
+    FilmsService.$inject = ['$http', '$q', 'filmNames', 'omdbApi', 'Film'];
 
-    function FilmsFactory($http, $q, filmNames, omdbApi, Film) {
+    function FilmsService($http, $q, filmNames, omdbApi, Film) {
 
         var filmsFactory = {};
         filmsFactory.films = [];
@@ -38,7 +38,6 @@
             for (var i = 0; i < filmsFactory.films.length; i++) {
                 if (filmsFactory.films[i].title === title) {
                     return filmsFactory.films[i];
-                    //return films.film;
                 }
             }
             return null;
@@ -74,13 +73,11 @@
 
 
         function getFilms(){
-            var deferred = $q.defer();
-            console.log(filmsFactory.films.length);
+            var deferred = $q.defer();           
             if (filmsFactory.films.length > 0) {
 
                 deferred.resolve(filmsFactory.films);
-            } else {
-                console.log("entro en getFilms2");
+            } else {      
                 var nDownloads = 0;
                 var someErrorOccured = false;
                 var resolveIfFinished = function(success) {
@@ -118,9 +115,7 @@
                 }
             }
             return deferred.promise;
-        }
-
-      // return filmsFactory;
+        }      
     }
 
 })();
