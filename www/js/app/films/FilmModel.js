@@ -1,6 +1,7 @@
 (function() {
     'use strict';
-    angular.module('FilmModel', [])
+    angular
+    .module('movieExplorer')
 
     .factory('Film', Film);
      function Film() {

@@ -2,8 +2,10 @@
     'use strict';
     angular
 
-    .module('starter', ['ionic', 'FilmsModule', 'Routes'])
-
+    .module('movieExplorer', ['ionic'])
+    /*.constant('FirebaseUrl', 'https://ionicle.firebaseio.com/')
+    .service('rootRef', ['FirebaseUrl', Firebase]) */
+ 
     .run(function($ionicPlatform) {
         $ionicPlatform.ready(function() {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

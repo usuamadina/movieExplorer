@@ -1,13 +1,26 @@
 (function() {
     'use-strict';
     angular
-    .module('Routes', [])
+    .module('movieExplorer')
 
     .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
 
-            .state('app', {
+        /* .state('app', {
             url: '/app',
+            abstract: true,
+            templateUrl: 'js/app/menu/menu.html',
+        })*/
+
+        .state('app', {
+            url: '/app',
+            templateUrl: 'js/app/login/login.html',
+            controller: 'LoginController',
+            controllerAs: 'vm'
+        })
+
+        .state('app.menu', {
+            url: '/menu',
             abstract: true,
             templateUrl: 'js/app/menu/menu.html',
         })

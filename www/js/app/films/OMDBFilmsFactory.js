@@ -1,8 +1,9 @@
 (function() {
 
+    'use-strict';
     angular
 
-        .module('OMDBFilmsFactory', ['FilmModel', 'Constants'])
+     .module('movieExplorer')
 
     .factory('FilmsService', FilmsService);
 

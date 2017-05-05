@@ -1,7 +1,7 @@
 (function(){
 	'use-strict';
 	angular
-	.module('Constants',[])
+	.module('movieExplorer')
 	
     .constant('filmNames', [
         'the martian',
@@ -23,4 +23,7 @@
             namePlaceholder: namePlaceholder
         };
     })())
+    
+     .constant('FirebaseUrl', 'https://ionicle.firebaseio.com/');
+
 })()
