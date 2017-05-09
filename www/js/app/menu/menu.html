@@ -7,9 +7,9 @@
         <ion-content>
             <ion-list ng-controller="LoginController as vm">
                 <div class="item item-avatar">
-                    <img ng-src="{{vm.vm.user_photo}}">
-                    <h2 ng-binding="{{vm.user_name}}"></h2>
-                    <p class="ng-bind">{{vm.user_email}}</p>
+                    <img id="user-image" ng-src="{{user_info.photoURL}}" >
+                    <h2>{{user_info.displayName}}</h2>
+                    <p>{{user_info.email}}</p>
                 </div> 
                 <ion-item ui-sref="app.about" menu-close>
                     <i class="icon ion-ios-help"></i> About

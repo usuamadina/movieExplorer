@@ -9,7 +9,7 @@
         var vm = this;
         vm.user_photo = "";
         vm.user_name = "";
-        vm.user_email = "";
+        vm.user_emai = "";
 
                   // For hiding the side bar and nav icon
         // When the user logs out and reaches login page,
@@ -25,6 +25,7 @@
         //Check if user already logged in
         firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
+                $scope.user_info = user;
 
                 //Removes back link to login page
                 $ionicHistory.nextViewOptions({
@@ -48,7 +49,6 @@
                 var token = result.credential.accessToken;
                 // The signed-in user info.
                 var user = result.user;
-                console.log("img user = " + user.photoURL);
                 vm.user_photo = result.user.photoURL;
                 vm.user_name = result.user.displayName;
                 vm.user_email = result.user.email;
@@ -114,10 +114,7 @@
             uid = user.uid; // The user's ID, unique to the Firebase project. Do NOT use
             // this value to authenticate with your backend server, if
             // you have one. Use User.getToken() instead.
-        }*/
-
-
-
+        }
 
 
         $scope.getUserImage = function() {
@@ -125,7 +122,7 @@
             if (user != null){
                 return user.photoUrl;
             }
-            return null;        }
+            return null;        }*/
 
     })
 

@@ -1,25 +1,31 @@
 /* Empty. Add your own CSS if you like */
 
-#films.rating{
-	position: absolute;
-    bottom: 4px;	
+#films.rating {
+    position: absolute;
+    bottom: 4px;
 }
 
-.info{
-	height:65px;
-	overflow: hidden;
-
+.info {
+    height: 65px;
+    overflow: hidden;
 }
 
 #films h2 {
-	white-space: normal;
+    white-space: normal;
 }
 
-#films p{
-	white-space: normal
+#films p {
+    white-space: normal
 }
 
-#films img{
-	background-size: cover;
+#films img {
+    background-size: cover;
     background-position: center;
+}
+
+#user-image {
+    margin: 0 auto;
+    position: static; 
+    max-width: 80px;
+    max-height: 80px;
 }
