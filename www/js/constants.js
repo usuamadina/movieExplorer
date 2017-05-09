@@ -24,6 +24,7 @@
         };
     })())
     
-     .constant('FirebaseUrl', 'https://ionicle.firebaseio.com/');
+     .constant('FirebaseUrl', 'https://ionicle.firebaseio.com/')
+
 
 })()

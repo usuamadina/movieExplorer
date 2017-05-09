@@ -3,20 +3,21 @@
 
     angular
 
-    .module('movieExplorer')
+        .module('movieExplorer')
 
     .controller('FilmsController', FilmsController);
 
-    FilmsController.$inject=['$scope','Film','films'];   
-    function FilmsController($scope, Film, films) {           
+    FilmsController.$inject = ['$scope', 'Film', 'films'];
+
+    function FilmsController($scope, Film, films) {
         var vm = this;
         vm.films = null;
 
-        function initView() {       
-            vm.films = films;           
+        function initView() {
+            vm.films = films;
         };
-           $scope.$on('$ionicView.loaded', function() {
-               initView();
-           });
-       };
+        $scope.$on('$ionicView.loaded', function() {
+            initView();
+        });
+    };
 })();

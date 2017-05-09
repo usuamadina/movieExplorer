@@ -1,0 +1,28 @@
+<ion-view title="Login" id="page3">
+    <ion-content padding="true" class="has-header">
+        <h2 id="login-heading1" style="color:#523636;text-align:center;">Movie Explorer</h2>
+        <div>
+            <img src="../img/movieExplorer.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+        </div>
+        <form name="loginForm" class="list" id="login-form1">
+            <!--ion-list id="login-list2">
+ 
+                <div class="app-icon"></div>
+ 
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Email</span>
+                    <input ng-model="user.email" type="email" placeholder="Email">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Password</span>
+                    <input ng-model="user.password" type="password" placeholder="Password">
+                </label>
+ 
+            </ion-list-->
+            <div class="spacer"></div>
+            <button ng-click="loginGmail()" class=" button button-assertive  button-block  icon-left ion-ios-email-outline " id="signup-button3">Login with gmail</button>
+            <!-- #2. FB login-->
+            <button ng-click="loginFb()" class=" button button-positive  button-block icon-left ion-social-facebook " id="signup-button4">Login with Facebook</button>
+        </form>
+    </ion-content>
+</ion-view>
